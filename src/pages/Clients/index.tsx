@@ -30,7 +30,7 @@ export function ClientsPage() {
         </PageContainer>
       </section>
 
-      <section id="portfolio" className="scroll-mt-8 py-20 sm:py-28">
+      <section id="portfolio" tabIndex={-1} className="scroll-mt-8 py-20 sm:py-28">
         <PageContainer>
           <div className="flex flex-col gap-5 border-b border-white/10 pb-8 sm:flex-row sm:items-end sm:justify-between">
             <div><p className="text-xs font-semibold uppercase tracking-[0.22em] text-axr-interactive">Portfólio</p><h2 className="mt-4 text-3xl font-semibold tracking-[-0.035em] text-white sm:text-4xl">Trabalhos publicados</h2></div>

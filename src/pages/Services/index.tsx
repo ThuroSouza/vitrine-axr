@@ -20,7 +20,7 @@ export function ServicesPage() {
         </PageContainer>
       </section>
 
-      <section id="solucoes" className="scroll-mt-8 py-20 sm:py-28">
+      <section id="solucoes" tabIndex={-1} className="scroll-mt-8 py-20 sm:py-28">
         <PageContainer>
           <SectionHeader eyebrow="01 / O que desenvolvemos" title="A solução acompanha a sua operação." description="Cada serviço parte de um escopo próprio. As possibilidades abaixo ajudam a visualizar o que pode ser desenvolvido, de acordo com as necessidades do projeto." />
           <div className="mt-12">{services.map((service) => <ServiceDetail key={service.id} {...service} />)}</div>

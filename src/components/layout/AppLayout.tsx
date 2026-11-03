@@ -10,15 +10,27 @@ function ScrollManager() {
   const previousPath = useRef(pathname)
   useEffect(() => {
     if (hash) {
-      requestAnimationFrame(() => {
+      let observer: MutationObserver | null = null
+      const scrollToTarget = () => {
         const target = document.getElementById(hash.slice(1))
-        target?.scrollIntoView()
-        target?.focus({ preventScroll: true })
-      })
-    } else {
-      window.scrollTo(0, 0)
-      if (previousPath.current !== pathname) document.getElementById('conteudo')?.focus({ preventScroll: true })
+        if (!target) return
+        target.scrollIntoView()
+        target.focus({ preventScroll: true })
+        observer?.disconnect()
+      }
+      observer = new MutationObserver(scrollToTarget)
+      const main = document.getElementById('conteudo')
+      if (main) observer.observe(main, { childList: true, subtree: true })
+      const frame = requestAnimationFrame(scrollToTarget)
+      previousPath.current = pathname
+      return () => {
+        cancelAnimationFrame(frame)
+        observer?.disconnect()
+      }
     }
+
+    window.scrollTo(0, 0)
+    if (previousPath.current !== pathname) document.getElementById('conteudo')?.focus({ preventScroll: true })
     previousPath.current = pathname
   }, [pathname, hash])
   return null
