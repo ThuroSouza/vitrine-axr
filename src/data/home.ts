@@ -1,11 +1,11 @@
 import { AppWindow, BriefcaseBusiness, ClipboardList, Headset, LayoutTemplate, Lightbulb, MoveUpRight, RefreshCw, ScanSearch, Scaling, Smartphone, Sparkles } from 'lucide-react'
 
 export const homeServices = [
-  { title: 'Sistemas empresariais personalizados', description: 'Soluções desenhadas para organizar operações e acompanhar a rotina de cada empresa.', icon: BriefcaseBusiness },
-  { title: 'Aplicativos personalizados', description: 'Experiências digitais criadas para necessidades específicas de equipes e clientes.', icon: Smartphone },
-  { title: 'Sites corporativos', description: 'Presença digital clara, responsiva e alinhada à identidade do seu negócio.', icon: LayoutTemplate },
-  { title: 'Plataformas de atendimento', description: 'Ferramentas para organizar solicitações e facilitar a comunicação com clientes.', icon: Headset },
-  { title: 'Gestão de tarefas e processos', description: 'Mais visibilidade sobre atividades, responsabilidades e fluxos de trabalho.', icon: ClipboardList },
+  { id: 'sistemas-empresariais', title: 'Sistemas empresariais personalizados', description: 'Soluções desenhadas para organizar operações e acompanhar a rotina de cada empresa.', icon: BriefcaseBusiness },
+  { id: 'aplicativos', title: 'Aplicativos personalizados', description: 'Experiências digitais criadas para necessidades específicas de equipes e clientes.', icon: Smartphone },
+  { id: 'sites-corporativos', title: 'Sites corporativos', description: 'Presença digital clara, responsiva e alinhada à identidade do seu negócio.', icon: LayoutTemplate },
+  { id: 'atendimento', title: 'Plataformas de atendimento', description: 'Ferramentas para organizar solicitações e facilitar a comunicação com clientes.', icon: Headset },
+  { id: 'tarefas-processos', title: 'Gestão de tarefas e processos', description: 'Mais visibilidade sobre atividades, responsabilidades e fluxos de trabalho.', icon: ClipboardList },
 ] as const
 
 export const homeDifferentials = [

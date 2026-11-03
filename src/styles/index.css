@@ -13,8 +13,9 @@
 }
 
 :root { font-family: var(--font-sans); color-scheme: dark; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scrollbar-color: #334155 #080B12; }
 body { min-width: 320px; margin: 0; }
+a { text-underline-offset: .2em; }
 ::selection { background: #1D4ED8; color: #F8FAFC; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }

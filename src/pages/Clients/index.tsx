@@ -18,12 +18,11 @@ export function ClientsPage() {
 
   return (
     <>
-      <section className="relative isolate overflow-hidden border-b border-white/10 py-20 sm:py-28">
-        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_82%_28%,rgba(29,78,216,0.15),transparent_36%),linear-gradient(rgba(148,163,184,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.03)_1px,transparent_1px)] bg-[size:auto,56px_56px,56px_56px]" />
+      <section className="relative isolate overflow-hidden border-b border-white/10 py-16 sm:py-24">
+        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_85%_30%,rgba(23,37,84,0.48),transparent_48%)]" />
         <PageContainer>
           <div className="max-w-4xl">
-            <p className="mb-8 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-axr-interactive"><span className="h-px w-7 bg-axr-interactive" /> Clientes e portfólio</p>
-            <h1 className="text-balance text-4xl font-semibold leading-[1.1] tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl">Projetos e Soluções</h1>
+            <h1 className="text-balance text-4xl font-semibold leading-[1.08] tracking-[-0.035em] text-white sm:text-6xl lg:text-7xl">Projetos e Soluções</h1>
             <p className="mt-7 max-w-2xl text-pretty text-base leading-8 text-axr-muted sm:text-lg">Conheça os projetos desenvolvidos pela AXR Sistemas Empresariais que foram autorizados para apresentação pública. Cada case mostra o contexto, a solução e suas funcionalidades.</p>
             <a href="#portfolio" className="mt-9 inline-flex min-h-12 items-center gap-2 text-sm font-semibold text-axr-interactive hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-axr-interactive">Explorar portfólio <ArrowDown size={17} aria-hidden="true" /></a>
           </div>
@@ -33,7 +32,7 @@ export function ClientsPage() {
       <section id="portfolio" tabIndex={-1} className="scroll-mt-8 py-20 sm:py-28">
         <PageContainer>
           <div className="flex flex-col gap-5 border-b border-white/10 pb-8 sm:flex-row sm:items-end sm:justify-between">
-            <div><p className="text-xs font-semibold uppercase tracking-[0.22em] text-axr-interactive">Portfólio</p><h2 className="mt-4 text-3xl font-semibold tracking-[-0.035em] text-white sm:text-4xl">Trabalhos publicados</h2></div>
+            <h2 className="text-3xl font-semibold tracking-[-0.035em] text-white sm:text-4xl">Trabalhos publicados</h2>
             <p className="text-sm text-axr-muted" aria-live="polite">{visibleProjects.length} {visibleProjects.length === 1 ? 'projeto' : 'projetos'}</p>
           </div>
 

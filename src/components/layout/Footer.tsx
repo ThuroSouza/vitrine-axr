@@ -31,8 +31,8 @@ export function Footer() {
           <div>
             <h2 className="text-sm font-semibold text-white">Contato</h2>
             <div className="mt-5 space-y-3 text-sm text-axr-muted">
-              {whatsappUrl && <a className="inline-flex items-center gap-1 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-axr-interactive" href={whatsappUrl} target="_blank" rel="noopener noreferrer">WhatsApp <ArrowUpRight size={14} aria-hidden="true" /></a>}
-              {email && <a className="block hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-axr-interactive" href={`mailto:${email}`}>{email}</a>}
+              {whatsappUrl && <div className="space-y-1"><p>{siteConfig.contact.whatsappDisplay}</p><a className="inline-flex min-h-9 items-center gap-1 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-axr-interactive" href={whatsappUrl} target="_blank" rel="noopener noreferrer">WhatsApp <ArrowUpRight size={14} aria-hidden="true" /></a></div>}
+              {email && <a className="block break-words hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-axr-interactive" href={`mailto:${email}`}>{email}</a>}
               {socialLinks.map(({ label, url }) => <a className="block hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-axr-interactive" key={url} href={url} target="_blank" rel="noopener noreferrer">{label}</a>)}
               {!hasContact && <p className="leading-6">Canais oficiais de contato serão disponibilizados em breve.</p>}
             </div>

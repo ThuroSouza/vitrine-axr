@@ -13,7 +13,7 @@ type ServiceDetailProps = {
 
 export function ServiceDetail({ id, number, title, description, detail, icon: Icon, possibilities, note }: ServiceDetailProps) {
   return (
-    <article id={id} className="scroll-mt-8 grid gap-8 border-t border-white/10 py-10 sm:py-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+    <article id={id} tabIndex={-1} className="scroll-mt-8 grid gap-8 border-t border-white/10 py-10 outline-none sm:py-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
       <div>
         <div className="flex items-center gap-4 text-axr-interactive">
           <span className="flex size-12 items-center justify-center rounded-xl border border-axr-interactive/25 bg-axr-blue/10"><Icon size={23} strokeWidth={1.8} aria-hidden="true" /></span>
