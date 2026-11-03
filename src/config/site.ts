@@ -5,8 +5,8 @@ export const siteConfig = {
   serviceArea: 'Atendimento online em todo o Brasil e presencial na Baixada Santista.',
   siteUrl: null as string | null,
   contact: {
-    whatsapp: null as string | null,
-    email: null as string | null,
+    whatsapp: '5513978254922' as string | null,
+    email: 'contato@axrsistemas.com.br' as string | null,
     socialLinks: [] as { label: string; url: string }[],
   },
 } as const

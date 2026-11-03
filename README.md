@@ -23,7 +23,7 @@ O build fica em `dist/`. O comando de build também gera HTML com metadados para
 
 ## Organização
 
-- `src/config/site.ts`: identidade e canais oficiais de contato. Os canais começam vazios para evitar dados fictícios.
+- `src/config/site.ts`: identidade e canais oficiais de contato.
 - `src/data/navigation.ts`: links principais.
 - `src/components/layout`: cabeçalho, rodapé e layout compartilhado.
 - `src/pages/Home`: Página Inicial completa, com seções institucionais, soluções, diferenciais, prévia do portfólio e contato.
@@ -44,7 +44,7 @@ O build fica em `dist/`. O comando de build também gera HTML com metadados para
 
 O projeto usa React Router. O Cloudflare Pages trata caminhos sem arquivo correspondente como rotas da SPA quando não há um `404.html` no topo do build; por isso, não é necessário um redirecionamento geral em `_redirects`. O React mostra a página 404 para rotas desconhecidas. A resposta HTTP de um caminho desconhecido ainda pode ser `200` pelo fallback da SPA.
 
-Os canais de contato permanecem vazios em `src/config/site.ts`. Para ativá-los, informe o WhatsApp comercial com código do país, o e-mail corporativo e os links HTTPS das redes sociais oficiais. O WhatsApp recebe a mensagem inicial definida no briefing. Sem canais diretos, a Página Inicial informa a pendência e não apresenta botões de envio sem destino.
+O WhatsApp comercial e o e-mail corporativo estão configurados em `src/config/site.ts`. O WhatsApp recebe a mensagem inicial definida no briefing. As redes sociais permanecem vazias até que seus links HTTPS oficiais sejam informados.
 
 Configure `siteUrl` em `src/config/site.ts` com a origem HTTPS final, por exemplo `https://seudominio.com`, quando ela estiver confirmada. O build passará a gerar URLs canônicas, `og:url`, `sitemap.xml` e `robots.txt`. Sem esse valor, esses arquivos e tags dependentes do domínio não são gerados. As cinco rotas principais têm HTML próprio com título, descrição e metadados sociais; o conteúdo dessas páginas continua renderizado no cliente. A resposta de uma rota desconhecida usa o HTML inicial da SPA, e o React aplica `noindex` após carregar. A imagem de compartilhamento social ainda depende de um recurso final aprovado.
 
