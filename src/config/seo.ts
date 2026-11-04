@@ -18,7 +18,7 @@ const pageMeta: Record<string, PageMeta> = {
   },
   '/clientes': {
     title: 'Projetos e Soluções | AXR Sistemas Empresariais',
-    description: 'Explore os projetos da AXR Sistemas Empresariais autorizados para divulgação pública.',
+    description: 'Explore prévias visuais de soluções da AXR para processos, finanças, visitas comerciais e vitrines de motos.',
   },
   '/institucional': {
     title: 'Institucional | AXR Sistemas Empresariais',

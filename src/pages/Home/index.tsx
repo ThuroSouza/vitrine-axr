@@ -4,10 +4,9 @@ import { PageContainer } from '../../components/layout/PageContainer'
 import { PrimaryButton } from '../../components/ui/PrimaryButton'
 import { SectionHeader } from '../../components/ui/SectionHeader'
 import { ServiceCard } from '../../components/ui/ServiceCard'
-import { ProjectCard } from '../../components/ui/ProjectCard'
-import { PortfolioEmptyState } from '../../components/ui/PortfolioEmptyState'
+import { PortfolioPreviewCard } from '../../components/ui/PortfolioPreviewCard'
 import { homeApproach, homeDifferentials, homeServices } from '../../data/home'
-import { publishedProjects } from '../../data/projects'
+import { portfolioPreviews } from '../../data/portfolioPreviews'
 import { contactChannels } from '../../utils/contact'
 
 export function HomePage() {
@@ -63,7 +62,7 @@ export function HomePage() {
 
     <section className="py-20 sm:py-28"><PageContainer><div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20"><SectionHeader title="Cada desafio pede uma resposta própria." description="Unimos atenção ao contexto da empresa e desenvolvimento personalizado para criar ferramentas úteis no dia a dia." /><ul className="grid sm:grid-cols-2 sm:gap-x-8">{homeDifferentials.map(({ title, icon: Icon }) => <li key={title} className="flex min-h-20 items-center gap-4 border-b border-white/10 py-4"><Icon size={21} strokeWidth={1.8} className="shrink-0 text-axr-interactive" aria-hidden="true" /><span className="text-sm font-medium leading-6 text-white sm:text-base">{title}</span></li>)}</ul></div></PageContainer></section>
 
-    <section className="py-20 sm:py-28"><PageContainer><div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between"><SectionHeader title="Projetos e soluções." description="Este espaço reúne uma prévia dos projetos autorizados para divulgação pública." /><Link to="/clientes" className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-axr-interactive hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-axr-interactive">Acompanhe o portfólio <ArrowUpRight size={17} aria-hidden="true" /></Link></div><div className="mt-10">{publishedProjects.length > 0 ? <div className="grid gap-5 md:grid-cols-2">{publishedProjects.slice(0, 2).map((project) => <ProjectCard key={project.slug} project={project} />)}</div> : <PortfolioEmptyState />}</div></PageContainer></section>
+    <section className="py-20 sm:py-28"><PageContainer><div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between"><SectionHeader title="Projetos e soluções." description="Explore as identidades visuais de soluções para processos, finanças, visitas comerciais e motos." /><Link to="/clientes" className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-axr-interactive hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-axr-interactive">Ver todas as soluções <ArrowUpRight size={17} aria-hidden="true" /></Link></div><div className="mt-10 grid gap-5 md:grid-cols-2">{portfolioPreviews.slice(0, 2).map((preview) => <PortfolioPreviewCard key={preview.name} preview={preview} />)}</div></PageContainer></section>
 
     <section id="contato" tabIndex={-1} className="scroll-mt-8 border-t border-white/10 bg-axr-navy py-20 outline-none sm:py-28">
       <PageContainer>
