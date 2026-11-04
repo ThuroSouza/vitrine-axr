@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { ArrowUpRight, Menu, X } from 'lucide-react'
 import { navigation } from '../../data/navigation'
+import { BrandLogo } from '../ui/BrandLogo'
 import { PageContainer } from './PageContainer'
 
 export function Header() {
@@ -29,9 +30,8 @@ export function Header() {
     <header className="relative z-30 border-b border-white/10 bg-axr-black/95">
       <PageContainer>
         <div className="flex min-h-20 items-center justify-between gap-6">
-          <Link to="/" aria-label="AXR Sistemas — página inicial" className="group inline-flex shrink-0 items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-axr-interactive">
-            <span className="flex size-11 items-center justify-center rounded-xl border border-axr-interactive/45 bg-axr-blue/15 text-sm font-bold tracking-tight text-white transition-colors group-hover:border-axr-interactive">AXR</span>
-            <span className="text-[0.8rem] font-semibold leading-tight tracking-[0.12em] text-white uppercase">Sistemas<br /><span className="font-normal tracking-[0.11em] text-axr-muted">Empresariais</span></span>
+          <Link to="/" aria-label="AXR Sistemas — página inicial" className="inline-flex shrink-0 items-center rounded-lg bg-axr-white px-2 py-1.5 transition-colors hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-axr-interactive">
+            <BrandLogo className="h-9 w-[170px] sm:h-10 sm:w-[190px]" />
           </Link>
 
           <nav aria-label="Navegação principal" className="hidden items-center gap-1 lg:flex">

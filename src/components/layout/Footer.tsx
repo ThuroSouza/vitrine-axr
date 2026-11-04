@@ -4,6 +4,7 @@ import { siteConfig } from '../../config/site'
 import { navigation } from '../../data/navigation'
 import { PageContainer } from './PageContainer'
 import { contactChannels } from '../../utils/contact'
+import { BrandLogo } from '../ui/BrandLogo'
 
 const plannedServices = ['Sistemas personalizados', 'Aplicativos', 'Sites corporativos', 'Plataformas de atendimento', 'Gestão de tarefas']
 
@@ -16,7 +17,7 @@ export function Footer() {
       <PageContainer>
         <div className="grid gap-12 py-14 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] lg:gap-10 lg:py-20">
           <div>
-            <Link to="/" className="inline-flex items-center gap-3 text-xl font-bold tracking-tight text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-axr-interactive"><span className="rounded-lg border border-axr-interactive/45 bg-axr-blue/15 px-2.5 py-1.5 text-sm">AXR</span> Sistemas</Link>
+            <Link to="/" aria-label="AXR Sistemas — página inicial" className="inline-flex items-center rounded-lg bg-axr-white px-2.5 py-2 transition-colors hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-axr-interactive"><BrandLogo className="h-12 w-[225px]" /></Link>
             <p className="mt-5 max-w-xs text-sm leading-7 text-axr-muted">{siteConfig.description}</p>
             <p className="mt-4 max-w-xs text-sm leading-7 text-axr-muted">{siteConfig.serviceArea}</p>
           </div>
