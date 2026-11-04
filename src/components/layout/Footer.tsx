@@ -17,7 +17,7 @@ export function Footer() {
       <PageContainer>
         <div className="grid gap-12 py-14 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] lg:gap-10 lg:py-20">
           <div>
-            <Link to="/" aria-label="AXR Sistemas — página inicial" className="inline-flex items-center rounded-lg bg-axr-white px-2.5 py-2 transition-colors hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-axr-interactive"><BrandLogo className="h-12 w-[225px]" /></Link>
+            <Link to="/" aria-label="AXR Sistemas — página inicial" className="inline-flex items-center rounded-lg bg-axr-white px-2.5 py-2 transition-colors hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-axr-interactive"><BrandLogo className="h-[108px] w-[240px]" /></Link>
             <p className="mt-5 max-w-xs text-sm leading-7 text-axr-muted">{siteConfig.description}</p>
             <p className="mt-4 max-w-xs text-sm leading-7 text-axr-muted">{siteConfig.serviceArea}</p>
           </div>

@@ -24,7 +24,7 @@ O build fica em `dist/`. O comando de build também gera HTML com metadados para
 ## Organização
 
 - `src/config/site.ts`: identidade e canais oficiais de contato.
-- `public/logo-corporativo-axr.png`, `src/components/ui/BrandLogo.tsx` e `public/favicon.svg`: logo corporativo fornecido para o site e ícone do navegador derivado do símbolo.
+- `public/logo-tecnologico-axr.png`, `src/components/ui/BrandLogo.tsx` e `public/favicon.svg`: logo tecnológico fornecido para o site e ícone do navegador derivado do símbolo.
 - `src/data/navigation.ts`: links principais.
 - `src/components/layout`: cabeçalho, rodapé e layout compartilhado.
 - `src/pages/Home`: Página Inicial completa, com seções institucionais, soluções, diferenciais, prévia do portfólio e contato.
